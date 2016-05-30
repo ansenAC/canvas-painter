@@ -11,7 +11,7 @@
 依赖requirejs or [esljs](https://github.com/ecomfe/esl)，部分dom selector依赖jQuery，不想引入可自行修改
 
 #### [edp](https://github.com/ecomfe/edp)
-ecomefe团队提供的web本地服务工具
+baidu ecomfe团队提供的web本地服务工具
 
 ### run and test
 1. npm ininstall edp
