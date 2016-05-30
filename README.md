@@ -14,7 +14,7 @@
 baidu ecomfe团队提供的web本地服务工具
 
 ### run and test
-1. npm ininstall edp
+1. npm install edp
 2. edp webserver start
 3. http://localhost:8848/view/painter.html
 
