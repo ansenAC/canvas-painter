@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>canvas画板 </title>
+    <script src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-6/esl.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../src/css/painter.less">
+
+</head>
+
+<body>
+    <div id="main">
+        <canvas id="canvas" width="800" height="500">
+        </canvas>
+        <div id="operation">
+            <div class="dropdown-group font-group">
+                <label>
+                    LineWidth:
+                </label>
+                <div class="dropdown">
+                    <div class="btn" data-value="1">
+                        1
+                    </div>
+                    <ul class="menu">
+                        <li data-value="1">
+                            1
+                        </li>
+                        <li data-value="4">
+                            4
+                        </li>
+                        <li data-value="10">
+                            10
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-group color-group">
+                <label>
+                    Color:
+                </label>
+                <div class="dropdown">
+                    <div class="btn" data-value="red">
+
+                    </div>
+                    <ul class="menu">
+                        <li data-value="green">
+
+                        </li>
+                        <li data-value="blue">
+
+                        </li>
+                        <li data-value="red">
+
+                        </li>
+                        <li data-value="black">
+
+                        </li>
+                        <li data-value="yellow">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="tool-bar">
+
+                <li class="action-tool tool-item active" data-type="doodle">
+                    <i class="icon icon-pencil"></i>
+                </li>
+                <li class="action-tool tool-item" data-type="arrow">
+                    <i class="icon icon-arrow"></i>
+                </li>
+                <!-- <li class="action-tool tool-item">
+                    <i class="icon icon-text"></i>
+                </li> -->
+                <li class="action-tool tool-item" data-type="rect">
+                    <i class="icon icon-rect"></i>
+                </li>
+                <li class="action-tool tool-item" data-type="circle">
+                    <i class="icon icon-circle"></i>
+                </li>
+                <li class="action-tool tool-item" data-type="eraser">
+                    <i class="icon icon-eraser"></i>
+                </li>
+                <li class="tool-item tool-trash">
+                    <i class="icon icon-trash"></i>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+    require.config({
+
+        baseUrl: '../src/js',
+        urlArgs: 'esl_resource_version'
+    });
+    </script>
+
+    <script>
+        require(['painter'], function (painter) {
+            painter.init();
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+@import "./reset.less";
+@import "./mixin.less";
+@import "./font/0.0.1/style.less";
+
+@operationHeight: 30px;
+
+body {
+    height: 900px;
+    -webkit-user-select: none;
+}
+
+#main {
+    width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px #000;
+}
+
+#canvas {
+    width: 800px;
+    height: 500px;
+}
+
+#operation {
+    width: 800px;
+    height: @operationHeight;
+    background-color: #313339;
+
+    color: #FFF;
+    font-size: 13px;
+}
+
+.dropdown-group {
+    .clearfix();
+    float: left;
+    height: 100%;
+    padding: 2px 5px;
+    margin-right: 5px;
+    color: #bdc6cf;
+
+    label {
+        float: left;
+        height: 100%;
+        line-height: @operationHeight - 2px;
+        margin-right: 3px;
+    }
+
+    .dropdown {
+        float: left;
+        cursor: pointer;
+        font-size: 13px;
+        user-select: none;
+
+        .btn {
+            width: 30px;
+            height: 20px;
+            margin: 3px 0;
+            line-height: 22px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            // user-select: none;
+        }
+
+        .menu {
+            display: none;
+            width: 30px;
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 2px;
+            background-color: #000;
+
+            li {
+                height: 20px;
+                line-height: 20px;
+                border-bottom: 1px dotted rgba(255,255,255,0.2);
+            }
+
+            li:hover {
+                color: #FFF;
+                background-color: rgba(255,255,255,0.1);
+            }
+
+        }
+    }
+}
+
+.font-group {
+    .dropdown {
+        .btn {
+            width: 30px;
+        }
+
+        .menu {
+            width: 30px;
+
+            li {
+                border-bottom: 1px dotted rgba(255,255,255,0.2);
+            }
+
+            li:hover {
+                color: #FFF;
+                background-color: rgba(255,255,255,0.1);
+            }
+
+        }
+    }
+}
+
+.color-group {
+    .dropdown {
+        .btn {
+            width: 30px;
+            height: 14px;
+            margin: 6px 0;
+            text-align: center;
+
+            &[data-value="green"] {
+                background-color: green;
+            }
+            &[data-value="yellow"] {
+                background-color: yellow;
+            }
+            &[data-value="blue"] {
+                background-color: blue;
+            }
+            &[data-value="black"] {
+                background-color: black;
+            }
+            &[data-value="red"] {
+                background-color: red;
+            }
+        }
+
+        .menu {
+            width: 30px;
+            padding: 2px;
+
+            li {
+                height: 12px;
+                border-bottom: 1px dotted rgba(255,255,255,0.2);
+                margin-bottom: 2px;
+
+                &[data-value="green"] {
+                    background-color: green;
+                }
+                &[data-value="yellow"] {
+                    background-color: yellow;
+                }
+                &[data-value="blue"] {
+                    background-color: blue;
+                }
+                &[data-value="black"] {
+                    background-color: black;
+                }
+                &[data-value="red"] {
+                    background-color: red;
+                }
+            }
+
+
+        }
+    }
+}
+
+.tool-bar {
+    .clearfix();
+
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    margin-left: 40px;
+    border-radius: 2px;
+
+    .action-tool {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+        text-align: center;
+        background-color: #46494d;
+        cursor: pointer;
+
+        &:hover {
+            .gradient-vertical(#FFF, #E4E5E6);
+            color: #313339;
+        }
+
+        &.active {
+            .gradient-vertical(#FFF, #E4E5E6);
+            color: #313339;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+
+    }
+
+    .tool-trash {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+        text-align: center;
+        background-color: #46494d;
+        cursor: pointer;
+
+        &:active {
+            background-color: rgb(70, 73, 77, 0.4);
+            color: #BDC6CF;
+        }
+    }
+
+    .icon {
+        vertical-align: middle;
+    }
+}
