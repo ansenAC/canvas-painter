@@ -1,5 +1,5 @@
 /**
- * 图形-剪头
+ * 图形-箭头
  */
 
 define(function (require, exports) {
